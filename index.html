@@ -8,6 +8,9 @@
     <title>Military Bases</title>
 
     <link rel="stylesheet" href="/style.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 
 <body>
@@ -17,20 +20,32 @@
             <legend>
                 <h3>Search Form</h3>
             </legend>
-            
+
             <input type="radio" id="conus" name="locationType" value="conus" checked>
             <label for="conus">CONUS</label>
-            
+
             <input type="radio" id="oconus" name="locationType" value="oconus">
             <label for="oconus">OCONUS</label>
-            
             <input id="baseLocation" type="text" placeholder="Enter State or OCONUS Country">
             <p>germany</p>
+
+            <!-- CREATE DROPDOWN MENUS FOR LOCATIONS -->
+            <!-- <label for="baseLocation">Select Location:</label>
+            <select id="baseLocation"> -->
+            <!-- options will be dynamically inserted -->
+            <!-- </select> -->
+
             <button>Search</button>
 
         </fieldset>
     </form>
     <h2 id="result"></h2>
+
+    <!-- Map container -->
+    <div id="map" style="height: 500px; width: 100%; margin-top: 20px;"></div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
     <script type="text/javascript" src="main.js"></script>
 </body>

@@ -312,6 +312,8 @@ app.get('/style.css', (request, response) => {
 })
 
 /*****API Endpoint*****/
+
+// API GET Handler
 app.get('/api/:locationType/:location', (request, response) => {
     const locationType = request.params.locationType.toLowerCase(); // sanitize the input
     const stateOrCountry = request.params.location.toLowerCase(); // sanitize the input
